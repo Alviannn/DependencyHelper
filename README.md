@@ -4,6 +4,8 @@ This is a java external dependency loader!
 Example code:
 
 ```java
+public class Example {
+
     public static void main(String[] args) {
         long start = System.currentTimeMillis();
         List<DependencyProfile> dependencies = new ArrayList<>();
@@ -44,4 +46,6 @@ Example code:
 
         logger.info("Loaded and/or downloaded all dependencies in " + (System.currentTimeMillis() - start) + " ms!");
     }
+
+}
 ```
