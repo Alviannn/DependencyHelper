@@ -57,17 +57,17 @@ public class Example {
 #### Maven
 1. Insert this to your repository section (on the pom.xml)
 ```xml
-		<repository>
-		    <id>jitpack.io</id>
-		    <url>https://jitpack.io</url>
-		</repository>
+<repository>
+    <id>jitpack.io</id>
+    <url>https://jitpack.io</url>
+</repository>
 ```
 
 2. Insert this to your dependency section (on the pom.xml)
 ```xml
-	<dependency>
-	    <groupId>com.github.Alviannn</groupId>
-	    <artifactId>DependencyHelper</artifactId>
-	    <version>1.0</version>
-	</dependency>
+<dependency>
+    <groupId>com.github.Alviannn</groupId>
+    <artifactId>DependencyHelper</artifactId>
+    <version>1.0</version>
+</dependency>
 ```
