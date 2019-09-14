@@ -1,4 +1,6 @@
 # DependencyHelper
+[![](https://jitpack.io/v/Alviannn/DependencyHelper.svg)](https://jitpack.io/#Alviannn/DependencyHelper)
+
 This is a java external dependency loader!
 
 Example code:
@@ -48,4 +50,23 @@ public class Example {
     }
 
 }
+```
+
+### How to setup
+
+#### Maven
+    1. Insert this to your repository section (on the pom.xml)
+```xml
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+```
+    2. Insert this to your dependency section (on the pom.xml)
+```xml
+	<dependency>
+	    <groupId>com.github.Alviannn</groupId>
+	    <artifactId>DependencyHelper</artifactId>
+	    <version>1.0</version>
+	</dependency>
 ```
