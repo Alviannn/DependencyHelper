@@ -55,14 +55,15 @@ public class Example {
 ### How to setup
 
 #### Maven
-    1. Insert this to your repository section (on the pom.xml)
+1. Insert this to your repository section (on the pom.xml)
 ```xml
 		<repository>
 		    <id>jitpack.io</id>
 		    <url>https://jitpack.io</url>
 		</repository>
 ```
-    2. Insert this to your dependency section (on the pom.xml)
+
+2. Insert this to your dependency section (on the pom.xml)
 ```xml
 	<dependency>
 	    <groupId>com.github.Alviannn</groupId>
