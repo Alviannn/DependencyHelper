@@ -12,6 +12,7 @@ import java.net.URLClassLoader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
+@SuppressWarnings("unused")
 public class DependencyHelper {
 
     private final ClassLoader classLoader;
@@ -25,11 +26,12 @@ public class DependencyHelper {
      *
      * @param dependency the dependency profile
      * @param dirPath the directory path
-     * @throws Exception if fails to download dependency file
+     * @throws Exception if the dependency file failed to download
      */
     @SuppressWarnings("ResultOfMethodCallIgnored")
     public void download(DependencyProfile dependency, Path dirPath) throws Exception {
         File dir = dirPath.toFile();
+
         if (!dir.exists()) {
             dir.mkdir();
         }
@@ -50,17 +52,41 @@ public class DependencyHelper {
     }
 
     /**
+     * downloads a dependency file
+     *
+     * @param name the file name
+     * @param fileUrl the file url
+     * @param dirPath the directory path
+     * @throws Exception if the dependency file failed to download
+     */
+    public void download(String name, String fileUrl, Path dirPath) throws Exception {
+        this.download(new DependencyProfile(name, fileUrl), dirPath);
+    }
+
+    /**
+     * loads the dependency file
+     *
+     * @param name the name
+     * @param fileUrl the file url
+     * @param dirPath the directory path
+     * @throws Exception if the dependency failed to load
+     */
+    public void load(String name, String fileUrl, Path dirPath) throws Exception {
+        this.load(new DependencyProfile(name, fileUrl), dirPath);
+    }
+
+    /**
      * handles dependency loading
      *
-     * @param dependency the dependency
+     * @param dependency the dependency profile
      * @param dirPath the directory path
-     * @throws Exception if fails to load dependency
+     * @throws Exception if the dependency failed to load
      */
-    @SuppressWarnings("ResultOfMethodCallIgnored")
     public void load(DependencyProfile dependency, Path dirPath) throws Exception {
         File dir = dirPath.toFile();
+
         if (!dir.exists()) {
-            dir.mkdir();
+            return;
         }
 
         File file = new File(dir, dependency.getFileName());
