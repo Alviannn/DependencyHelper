@@ -4,15 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>dev.luckynetwork.lib.dependencyhelper</groupId>
+    <groupId>com.github.alviannn.lib.dependencyhelper</groupId>
     <artifactId>DependencyHelper</artifactId>
-    <version>1.1</version>
+    <version>1.2</version>
     <packaging>jar</packaging>
 
     <developers>
         <developer>
             <name>Alviann</name>
-            <organization>Lucky Network</organization>
             <roles>
                 <role>author</role>
                 <role>maintainer</role>
@@ -20,11 +19,6 @@
             </roles>
         </developer>
     </developers>
-
-    <organization>
-        <name>Lucky Network</name>
-        <url>play.luckynetwork.id</url>
-    </organization>
 
     <build>
         <finalName>${project.artifactId}-${project.version}</finalName>
